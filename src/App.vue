@@ -1,17 +1,10 @@
-<template>
-  <navbar />
-  <home />
-  <router-view />
-</template>
-
-
-
 <script setup>
-import Navbar from './components/Navbar.vue';
-import Home from './views/Home.vue';
-
+import Navbar from './components/Navbar.vue'
+import BannerSlider from './components/BannerSlider.vue'
+import Home from './views/Home.vue'
 </script>
 
-<style>
-/* optional */
-</style>
+<template>
+  <Navbar />
+  <router-view />
+</template>
