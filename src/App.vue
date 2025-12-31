@@ -6,5 +6,6 @@ import Home from './views/Home.vue'
 
 <template>
   <Navbar />
+  <About />
   <router-view />
 </template>

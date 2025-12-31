@@ -1,40 +1,48 @@
-<script setup>
-import { ref } from 'vue'
-import { register } from '@/services/auth'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-const name = ref('')
-const email = ref('')
-const password = ref('')
-const error = ref('')
-
-const submit = () => {
-  const res = register({
-    name: name.value,
-    email: email.value,
-    password: password.value
-  })
-
-  if (!res.success) {
-    error.value = res.message
-  } else {
-    router.push('/login')
-  }
-}
-</script>
-
 <template>
-  <div class="max-w-md mx-auto mt-40">
-    <h2 class="text-2xl font-bold mb-4">Register</h2>
+  <div class="min-h-screen flex items-center justify-center pt-20">
+    <div class="w-full max-w-md bg-white p-8 rounded-xl shadow">
+      <h1 class="text-2xl font-bold mb-6 text-center text-pink-600">
+        Register
+      </h1>
 
-    <input v-model="name" placeholder="Nama" class="input" />
-    <input v-model="email" placeholder="Email" class="input" />
-    <input v-model="password" type="password" placeholder="Password" class="input" />
+      <form class="space-y-4">
+        <input
+          v-model="name"
+          type="text"
+          placeholder="Name"
+          class="w-full border px-4 py-2 rounded-lg"
+        />
 
-    <p class="text-red-500">{{ error }}</p>
+        <input
+          v-model="email"
+          type="email"
+          placeholder="Email"
+          class="w-full border px-4 py-2 rounded-lg"
+        />
 
-    <button @click="submit" class="btn">Register</button>
+        <input
+          v-model="password"
+          type="password"
+          placeholder="Password"
+          class="w-full border px-4 py-2 rounded-lg"
+        />
+
+        <button
+          class="w-full bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600"
+        >
+          Register
+        </button>
+      </form>
+
+      <p class="text-center mt-4 text-sm">
+        Sudah punya akun?
+        <RouterLink to="/login" class="text-pink-600">
+          Login
+        </RouterLink>
+      </p>
+    </div>
   </div>
-</template>
+  </template>
+
+  script setup>
+  script>
