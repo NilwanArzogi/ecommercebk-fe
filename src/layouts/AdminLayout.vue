@@ -13,7 +13,6 @@ async function handleLogout() {
 
 <template>
   <div class="flex min-h-screen bg-gray-50">
-    <!-- Sidebar -->
     <aside class="w-64 bg-white shadow-md flex flex-col">
       <div class="p-6 border-b">
         <h1 class="text-xl font-bold text-pink-600"> Bel's Kitchen</h1>
@@ -50,7 +49,6 @@ async function handleLogout() {
       </div>
     </aside>
 
-    <!-- Main Content -->
     <main class="flex-1 p-8 overflow-auto">
       <RouterView />
     </main>

@@ -1,5 +1,3 @@
-// src/services/auth.js
-
 export function register(user) {
   const users = JSON.parse(localStorage.getItem('users')) || []
 

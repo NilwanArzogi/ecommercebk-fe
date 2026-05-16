@@ -35,8 +35,7 @@ onMounted(async () => {
       </div>
     </div>
 
-    <!-- Fallback jika belum ada banner -->
-    <div v-if="slides.length === 0" class="flex items-center justify-center h-full">
+bac    <div v-if="slides.length === 0" class="flex items-center justify-center h-full">
       <p class="text-gray-500">Loading banner...</p>
     </div>
   </div>
